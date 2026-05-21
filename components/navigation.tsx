@@ -2,17 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/language-context';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="sticky top-0 bg-white bg-opacity-95 backdrop-blur-sm border-b border-gray-100 z-50">
+    <nav className="sticky top-0 bg-white/60 backdrop-blur-md border-b border-gray-100/50 z-50">
       <div className="w-full max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
@@ -31,11 +33,11 @@ export default function Navigation() {
                 strokeLinejoin="round"
                 initial={{ pathLength: 0, fill: "rgba(249, 115, 22, 0)" }}
                 animate={{ pathLength: 1, fill: "rgba(249, 115, 22, 0.15)" }}
-                transition={{ 
-                  duration: 2.5, 
-                  repeat: Infinity, 
-                  repeatType: "reverse", 
-                  ease: "easeInOut" 
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut"
                 }}
               />
             </svg>
@@ -45,7 +47,7 @@ export default function Navigation() {
               DEENINSOM
             </span>
             <span className="text-[9px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-0.5">
-              Creative Studio
+              Software Developer
             </span>
           </div>
         </Link>
@@ -53,23 +55,39 @@ export default function Navigation() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           <a href="#experience" className="text-gray-600 hover:text-black transition-colors text-sm relative group">
-            Experience
+            {t('nav.experience')}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </a>
           <a href="#portfolio" className="text-gray-600 hover:text-black transition-colors text-sm relative group">
-            Portfolio
+            {t('nav.portfolio')}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </a>
           <a href="#process" className="text-gray-600 hover:text-black transition-colors text-sm relative group">
-            Process
+            {t('nav.process')}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
           </a>
+          
+          <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-1 bg-white/50">
+            <button 
+              onClick={() => setLanguage('id')} 
+              className={`px-2 py-1 text-xs font-bold rounded-md transition-colors ${language === 'id' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+            >
+              ID
+            </button>
+            <button 
+              onClick={() => setLanguage('en')} 
+              className={`px-2 py-1 text-xs font-bold rounded-md transition-colors ${language === 'en' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+            >
+              EN
+            </button>
+          </div>
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-900 transition-all duration-300 text-sm hover:shadow-lg"
           >
-            Contact
+            {t('portfolio.contact_me')}
           </motion.button>
         </div>
 
@@ -98,7 +116,7 @@ export default function Navigation() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden border-t border-gray-100 bg-white overflow-hidden"
+            className="md:hidden border-t border-gray-100/50 bg-white/80 backdrop-blur-md overflow-hidden"
           >
             <motion.div
               initial={{ y: -10 }}
@@ -112,24 +130,43 @@ export default function Navigation() {
                 className="block text-gray-600 hover:text-black transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Experience
+                {t('nav.experience')}
               </a>
               <a
                 href="#portfolio"
                 className="block text-gray-600 hover:text-black transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Portfolio
+                {t('nav.portfolio')}
               </a>
               <a
                 href="#process"
                 className="block text-gray-600 hover:text-black transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
-                Process
+                {t('nav.process')}
               </a>
+              
+              <div className="flex items-center gap-2 py-2">
+                <span className="text-sm text-gray-500">Language:</span>
+                <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-1 bg-white/50">
+                  <button 
+                    onClick={() => { setLanguage('id'); setIsOpen(false); }} 
+                    className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${language === 'id' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+                  >
+                    ID
+                  </button>
+                  <button 
+                    onClick={() => { setLanguage('en'); setIsOpen(false); }} 
+                    className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${language === 'en' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+                  >
+                    EN
+                  </button>
+                </div>
+              </div>
+
               <button className="w-full px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-900 transition-colors text-sm">
-                Contact
+                {t('portfolio.contact_me')}
               </button>
             </motion.div>
           </motion.div>

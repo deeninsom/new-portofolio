@@ -3,46 +3,48 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function ProcessSection() {
+  const { t } = useLanguage();
   const [activeStep, setActiveStep] = useState(0);
 
   const steps = [
     {
       number: '01',
-      title: 'Gathering Requirements',
-      description: 'I begin by thoroughly understanding your project goals, business requirements, and technical constraints. This includes discussing the scope, timeline, target users, and any specific technologies or integrations needed. A clear requirements document ensures alignment and prevents miscommunication.',
-      details: ['Understand business goals', 'Define technical requirements', 'Identify constraints', 'Plan project scope']
+      title: t('process.1.title'),
+      description: t('process.1.desc'),
+      details: [t('process.1.detail.1'), t('process.1.detail.2'), t('process.1.detail.3'), t('process.1.detail.4')]
     },
     {
       number: '02',
-      title: 'System Architecture & Design',
-      description: 'I design the overall system architecture, choosing appropriate patterns for your needs. This involves planning the database schema, API structure, microservices boundaries, and deployment strategy. I ensure the architecture is scalable, maintainable, and follows best practices.',
-      details: ['Database schema design', 'API architecture', 'System design patterns', 'Technology stack selection']
+      title: t('process.2.title'),
+      description: t('process.2.desc'),
+      details: [t('process.2.detail.1'), t('process.2.detail.2'), t('process.2.detail.3'), t('process.2.detail.4')]
     },
     {
       number: '03',
-      title: 'Backend Development',
-      description: 'I develop the server-side logic using Node.js/NestJS, creating RESTful APIs, handling business logic, and managing databases. I focus on clean code, proper error handling, security, and performance optimization. All code follows industry standards and best practices.',
-      details: ['REST API development', 'Database integration', 'Authentication & authorization', 'Business logic implementation']
+      title: t('process.3.title'),
+      description: t('process.3.desc'),
+      details: [t('process.3.detail.1'), t('process.3.detail.2'), t('process.3.detail.3'), t('process.3.detail.4')]
     },
     {
       number: '04',
-      title: 'Frontend Development',
-      description: 'I build the user interface using React/Next.js, creating responsive and intuitive designs. The frontend integrates seamlessly with the backend APIs and provides a smooth user experience. I implement proper state management and optimize for performance.',
-      details: ['React component development', 'UI/UX implementation', 'API integration', 'Responsive design']
+      title: t('process.4.title'),
+      description: t('process.4.desc'),
+      details: [t('process.4.detail.1'), t('process.4.detail.2'), t('process.4.detail.3'), t('process.4.detail.4')]
     },
     {
       number: '05',
-      title: 'Testing & Debugging',
-      description: 'Comprehensive testing ensures reliability and quality. I perform unit tests, integration tests, and end-to-end testing. Any bugs discovered are tracked and fixed systematically, and performance is optimized across the application.',
-      details: ['Unit testing', 'Integration testing', 'Bug detection & fixing', 'Performance optimization']
+      title: t('process.5.title'),
+      description: t('process.5.desc'),
+      details: [t('process.5.detail.1'), t('process.5.detail.2'), t('process.5.detail.3'), t('process.5.detail.4')]
     },
     {
       number: '06',
-      title: 'Deployment & Maintenance',
-      description: 'The application is deployed to production with proper CI/CD pipelines. I ensure smooth deployment, monitor performance, and provide ongoing maintenance and support. Regular updates and improvements are made based on user feedback and monitoring data.',
-      details: ['Production deployment', 'CI/CD setup', 'Performance monitoring', 'Ongoing maintenance']
+      title: t('process.6.title'),
+      description: t('process.6.desc'),
+      details: [t('process.6.detail.1'), t('process.6.detail.2'), t('process.6.detail.3'), t('process.6.detail.4')]
     },
   ];
 
@@ -57,11 +59,11 @@ export default function ProcessSection() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 id="process" className="text-lg font-bold text-black mb-2">How I work</h2>
-          <p className="text-gray-600">A structured approach to building high-quality software</p>
+          <h2 id="process" className="text-lg font-bold text-black mb-2">{t('process.title')}</h2>
+          <p className="text-gray-600">{t('process.subtitle')}</p>
         </motion.div>
 
-        <Card className="border-0 bg-white p-8 md:p-12">
+        <Card className="border-0 bg-white/60 backdrop-blur-md shadow-xl p-8 md:p-12">
           {/* Active Step Content */}
           <div className="mb-10 min-h-[350px]">
             <AnimatePresence mode="wait">
@@ -74,7 +76,7 @@ export default function ProcessSection() {
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 mb-6">
                   <div className="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold flex-shrink-0 whitespace-nowrap w-fit">
-                    Step {currentStep.number}
+                    {t('process.step')} {currentStep.number}
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-black">{currentStep.title}</h3>
                 </div>
@@ -84,7 +86,7 @@ export default function ProcessSection() {
 
                 {/* Details List */}
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h4 className="font-bold text-black mb-4">Key activities:</h4>
+                  <h4 className="font-bold text-black mb-4">{t('process.key_activities')}</h4>
                   <ul className="space-y-2">
                     {currentStep.details.map((detail, idx) => (
                       <li key={idx} className="flex items-start gap-3">
@@ -103,9 +105,9 @@ export default function ProcessSection() {
           {/* Step Indicators - Segmented Control Style */}
           <div className="mt-12 w-full pt-6 border-t border-gray-100">
             <div className="flex items-center justify-between mb-4 px-1">
-              <span className="text-sm font-bold text-gray-900">Process Flow</span>
+              <span className="text-sm font-bold text-gray-900">{t('process.flow')}</span>
               <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">
-                Step {activeStep + 1} / {steps.length}
+                {t('process.step')} {activeStep + 1} / {steps.length}
               </span>
             </div>
             <div className="flex w-full bg-gray-50 border border-gray-100 rounded-xl p-1.5 relative overflow-x-auto scrollbar-none gap-1">

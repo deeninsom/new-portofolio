@@ -126,3 +126,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}

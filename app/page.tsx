@@ -8,7 +8,7 @@ import WhatsAppButton from '@/components/whatsapp-button';
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="relative min-h-screen">
       <Navigation />
       <HeroSection />
       <div className="border-t border-gray-200">

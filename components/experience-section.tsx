@@ -1,29 +1,32 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
+import { useLanguage } from '@/contexts/language-context';
 
 export default function ExperienceSection() {
+  const { t } = useLanguage();
+
   const experiences = [
     {
-      title: 'Founder | Indevtech Solutions',
-      duration: 'January 2023 – Present',
+      title: t('exp.1.title'),
+      duration: t('exp.1.duration'),
       type: 'current',
       website: 'https://indevtechsolutions.com',
-      description: 'Manage communications with hosting providers, clients, and vendors. Conduct requirements analysis and design full-stack JavaScript applications. Create UI/UX designs and oversee end-to-end project development.',
+      description: t('exp.1.desc'),
     },
     {
-      title: 'Backend Developer (Remote) | Tekko.id',
-      duration: 'April 2023 – July 2023',
+      title: t('exp.2.title'),
+      duration: t('exp.2.duration'),
       type: 'past',
       website: 'https://tekko.id/id',
-      description: 'Contributed to application design and development, troubleshooted backend systems, and collaborated with cross-functional teams. Integrated third-party services and maintained production servers.',
+      description: t('exp.2.desc'),
     },
     {
-      title: 'Fullstack Software Developer | Lviors Jaya Sentosa',
-      duration: 'January 2024 – Present',
+      title: t('exp.3.title'),
+      duration: t('exp.3.duration'),
       type: 'current',
       website: 'https://www.lviors.com',
-      description: 'Redesigned customer and admin web panels, developed both frontend and backend features, implemented microservices modules, and fixed bugs across multiple projects.',
+      description: t('exp.3.desc'),
     },
   ];
 
@@ -53,17 +56,17 @@ export default function ExperienceSection() {
   return (
     <section className="py-12 px-4">
       <div className="w-full max-w-3xl mx-auto">
-        <motion.h2 
-          id="experience" 
+        <motion.h2
+          id="experience"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-lg font-bold text-black mb-8"
         >
-          My Experience
+          {t('exp.title')}
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           className="space-y-6"
           variants={containerVariants}
           initial="hidden"
@@ -79,8 +82,8 @@ export default function ExperienceSection() {
               </div>
 
               {/* Content */}
-              <motion.div 
-                whileHover={{ x: 6 }} 
+              <motion.div
+                whileHover={{ x: 6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="pb-6"
               >
@@ -88,14 +91,14 @@ export default function ExperienceSection() {
                 <p className="text-sm text-gray-600">{exp.duration}</p>
                 {exp.description && <p className="text-sm text-gray-600 mt-2">{exp.description}</p>}
                 {exp.website && (
-                  <a 
-                    href={exp.website} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={exp.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm text-orange-500 font-semibold mt-2 hover:text-orange-600 transition-colors group"
                   >
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                    Visit Website
+                    {t('exp.visit_website')}
                     <span className="inline-block transform group-hover:translate-x-0.5 transition-transform duration-200">→</span>
                   </a>
                 )}
