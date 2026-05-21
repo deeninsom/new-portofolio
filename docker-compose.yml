@@ -1,0 +1,9 @@
+services:
+  web:
+    image: ghcr.io/deeninsom/new-portofolio:latest
+    container_name: web-portofolio
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
