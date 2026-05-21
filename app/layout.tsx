@@ -14,15 +14,15 @@ export const metadata: Metadata = {
   description: 'Muhammad Syihabuddin is a skilled  Software Developer based in Surabaya, Indonesia. Software Developer at Lviors Jaya Sentosa, specializing in Next.js, Node.js, NestJS, and microservices architecture.',
   keywords: 'Muhammad Syihabuddin,  Developer, Backend Developer, Lviors Jaya Sentosa, Surabaya, React, Next.js, Node.js, NestJS, Web Developer Indonesia',
   generator: 'Next.js',
-  authors: [{ name: 'Muhammad Syihabuddin', url: 'https://muhammadsyihabuddin.com' }],
-  metadataBase: new URL('https://muhammadsyihabuddin.com'),
+  authors: [{ name: 'Muhammad Syihabuddin', url: 'https://deeninsom.indevtechsolutions.com' }],
+  metadataBase: new URL('https://deeninsom.indevtechsolutions.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Muhammad Syihabuddin |  Software Developer',
     description: ' Software Developer based in Surabaya, Indonesia. Software Developer at Lviors Jaya Sentosa, specializing in building high-performance web applications.',
-    url: 'https://muhammadsyihabuddin.com',
+    url: 'https://deeninsom.indevtechsolutions.com',
     siteName: 'Muhammad Syihabuddin Portfolio',
     locale: 'id_ID',
     type: 'website',
@@ -52,14 +52,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Muhammad Syihabuddin",
-    "url": "https://muhammadsyihabuddin.com",
+    "url": "https://deeninsom.indevtechsolutions.com",
     "jobTitle": " Software Developer",
     "worksFor": {
       "@type": "Organization",
       "name": "Lviors Jaya Sentosa"
     },
     "description": " Software Developer based in Surabaya, Indonesia. Software Developer at Lviors Jaya Sentosa.",
-    "image": "https://muhammadsyihabuddin.com/placeholder-user.jpg",
+    "image": "https://deeninsom.indevtechsolutions.com/placeholder-user.jpg",
     "sameAs": [
       "https://www.linkedin.com/in/muhammad-syihabuddin",
       "https://github.com"
