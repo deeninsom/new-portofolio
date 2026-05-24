@@ -102,6 +102,32 @@ export const id: Record<DictionaryKey, string> = {
   "footer.copyright": "© 2026 Muhammad Syihabuddin. Hak Cipta Dilindungi.",
   "footer.built_with": "Dibuat dengan Next.js & Tailwind CSS",
 
+  // Projects Section
+  "projects.title": "Karya Saya",
+  "projects.subtitle": "Beberapa proyek dan eksplorasi terbaru saya",
+  "projects.view_demo": "Lihat Demo",
+  "projects.view_code": "Kode Sumber",
+  "projects.view_detail": "Detail",
+
+  "project.1.title": "New Fei - Footwear Manufacture",
+  "project.1.desc": "Mitra produksi alas kaki terpercaya, menghadirkan standar kualitas tinggi untuk sneakers dan sandal.",
+  "project.2.title": "Mitrakon Persada Abadi",
+  "project.2.desc": "Fire System Specialist. Desain terintegrasi, instalasi, dan pemeliharaan Fire Alarm, Hydrant, dan Suppression Systems.",
+  "project.3.title": "Wibawa Jati Putra",
+  "project.3.desc": "Solusi Teknik & Konstruksi Industri Terpercaya. Mitra profesional maintenance mesin dan konstruksi pabrik sejak 2016.",
+  "project.4.title": "AB Event Organizer",
+  "project.4.desc": "Professional All-in-One Event Solutions. Solusi acara korporat, pameran dagang B2B, dan konferensi berskala besar.",
+  "project.5.title": "Woodelio Premium Interior",
+  "project.5.desc": "Spesialis Kitchen Set Berkualitas Tinggi dengan Harga Rasional. 20+ tahun pengalaman pengerjaan kitchen set HPL.",
+  "project.6.title": "Lviors ERP (RME & Payroll)",
+  "project.6.desc": "Platform ERP terintegrasi untuk mengelola Rekam Medis Elektronik (RME) dan Payroll di Lviors Jaya Sentosa.",
+  "project.7.title": "The Favored One - MLM",
+  "project.7.desc": "Platform Multi-Level Marketing (MLM) komprehensif yang dirancang untuk merampingkan operasi jaringan dan meningkatkan keterlibatan pengguna.",
+  "project.8.title": "INDEVTECH - Automation",
+  "project.8.desc": "Agency IT milik saya sendiri yang membantu bisnis bertransformasi digital melalui otomatisasi proses dan integrasi sistem.",
+  "project.9.title": "CoreLink Console",
+  "project.9.desc": "Aplikasi console custom untuk manajemen server jarak jauh dengan dukungan autentikasi SSH yang aman.",
+  
   // WhatsApp
   "whatsapp.chat": "Chat dengan saya",
 };

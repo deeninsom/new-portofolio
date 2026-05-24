@@ -27,12 +27,12 @@ export default function Navigation() {
               <rect width="40" height="40" rx="10" className="fill-black group-hover:fill-neutral-900 transition-colors duration-300" />
               <motion.path
                 d="M14 12V28H21C25.418 28 29 24.418 29 20C29 15.582 25.418 12 21 12H14Z"
-                stroke="#F97316"
+                stroke="#2563EB"
                 strokeWidth="3.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                initial={{ pathLength: 0, fill: "rgba(249, 115, 22, 0)" }}
-                animate={{ pathLength: 1, fill: "rgba(249, 115, 22, 0.15)" }}
+                initial={{ pathLength: 0, fill: "rgba(37, 99, 235, 0)" }}
+                animate={{ pathLength: 1, fill: "rgba(37, 99, 235, 0.15)" }}
                 transition={{
                   duration: 2.5,
                   repeat: Infinity,
@@ -43,7 +43,7 @@ export default function Navigation() {
             </svg>
           </motion.div>
           <div className="flex flex-col justify-center">
-            <span className="font-extrabold text-black text-xl tracking-tight leading-none group-hover:text-orange-500 transition-colors duration-300">
+            <span className="font-extrabold text-black text-xl tracking-tight leading-none group-hover:text-blue-600 transition-colors duration-300">
               DEENINSOM
             </span>
             <span className="text-[9px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-0.5">
@@ -56,27 +56,27 @@ export default function Navigation() {
         <div className="hidden md:flex items-center gap-8">
           <a href="#experience" className="text-gray-600 hover:text-black transition-colors text-sm relative group">
             {t('nav.experience')}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
           </a>
           <a href="#portfolio" className="text-gray-600 hover:text-black transition-colors text-sm relative group">
             {t('nav.portfolio')}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
           </a>
           <a href="#process" className="text-gray-600 hover:text-black transition-colors text-sm relative group">
             {t('nav.process')}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
           </a>
           
           <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-1 bg-white/50">
             <button 
               onClick={() => setLanguage('id')} 
-              className={`px-2 py-1 text-xs font-bold rounded-md transition-colors ${language === 'id' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+              className={`px-2 py-1 text-xs font-bold rounded-md transition-colors ${language === 'id' ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-black'}`}
             >
               ID
             </button>
             <button 
               onClick={() => setLanguage('en')} 
-              className={`px-2 py-1 text-xs font-bold rounded-md transition-colors ${language === 'en' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+              className={`px-2 py-1 text-xs font-bold rounded-md transition-colors ${language === 'en' ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-black'}`}
             >
               EN
             </button>
@@ -152,13 +152,13 @@ export default function Navigation() {
                 <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-1 bg-white/50">
                   <button 
                     onClick={() => { setLanguage('id'); setIsOpen(false); }} 
-                    className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${language === 'id' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+                    className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${language === 'id' ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-black'}`}
                   >
                     ID
                   </button>
                   <button 
                     onClick={() => { setLanguage('en'); setIsOpen(false); }} 
-                    className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${language === 'en' ? 'bg-orange-500 text-white' : 'text-gray-500 hover:text-black'}`}
+                    className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${language === 'en' ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-black'}`}
                   >
                     EN
                   </button>

@@ -100,6 +100,32 @@ export const en = {
   "footer.copyright": "© 2026 Muhammad Syihabuddin. All rights reserved.",
   "footer.built_with": "Built with Next.js & Tailwind CSS",
 
+  // Projects Section
+  "projects.title": "My Projects",
+  "projects.subtitle": "Some of my recent works and explorations",
+  "projects.view_demo": "Live Demo",
+  "projects.view_code": "Source Code",
+  "projects.view_detail": "Details",
+
+  "project.1.title": "New Fei - Footwear Manufacture",
+  "project.1.desc": "Trusted footwear manufacturing partner, delivering high-quality standards for sneakers and sandals.",
+  "project.2.title": "Mitrakon Persada Abadi",
+  "project.2.desc": "Fire System Specialist. Integrated design, installation, and maintenance for Fire Alarm, Hydrant, and Suppression Systems.",
+  "project.3.title": "Wibawa Jati Putra",
+  "project.3.desc": "Reliable Industrial Engineering & Construction Solutions. Professional partner for machine maintenance and factory construction.",
+  "project.4.title": "AB Event Organizer",
+  "project.4.desc": "Professional All-in-One Event Solutions. Delivering high-energy corporate events, conferences, and large-scale summits.",
+  "project.5.title": "Woodelio Premium Interior",
+  "project.5.desc": "High-Quality Kitchen Set Specialist with 20+ years of experience in custom HPL interior design and production.",
+  "project.6.title": "Lviors ERP (RME & Payroll)",
+  "project.6.desc": "An integrated ERP platform for managing Electronic Medical Records and Payroll at Lviors Jaya Sentosa.",
+  "project.7.title": "The Favored One - MLM",
+  "project.7.desc": "A comprehensive Multi-Level Marketing (MLM) platform designed to streamline operations and enhance user engagement.",
+  "project.8.title": "INDEVTECH - Automation",
+  "project.8.desc": "My own agency focused on automating manual processes and integrating custom software ecosystems for businesses.",
+  "project.9.title": "CoreLink Console",
+  "project.9.desc": "A custom server management console for secure remote access via SSH with password and private key authentication.",
+  
   // WhatsApp
   "whatsapp.chat": "Chat with me",
 };

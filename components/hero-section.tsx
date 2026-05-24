@@ -44,7 +44,7 @@ export default function HeroSection() {
         {/* Email section */}
         <motion.div variants={itemVariants} className="flex items-center justify-between mb-12">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-orange-500 animate-pulse"></div>
+            <div className="w-3 h-3 rounded-full bg-blue-600 animate-pulse"></div>
             <a href="mailto:muhammad.syihabuddinn@gmail.com" className="text-sm text-gray-600 hover:text-black transition-colors">
               muhammad.syihabuddinn@gmail.com
             </a>
@@ -66,7 +66,7 @@ export default function HeroSection() {
             {t('hero.role3')}
           </p>
           <p className="text-2xl md:text-4xl font-bold">
-            <span className="text-orange-500">{t('hero.company')}</span>
+            <span className="text-blue-600">{t('hero.company')}</span>
           </p>
         </motion.div>
 
@@ -79,7 +79,7 @@ export default function HeroSection() {
               </Button>
             </motion.a>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Badge variant="outline" className="flex items-center gap-2 rounded-full px-4 py-2 bg-white border border-gray-200 transition-colors hover:border-orange-500 whitespace-nowrap flex-shrink-0">
+              <Badge variant="outline" className="flex items-center gap-2 rounded-full px-4 py-2 bg-white border border-gray-200 transition-colors hover:border-blue-600 whitespace-nowrap flex-shrink-0">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                 {t('hero.open_opportunities')}
               </Badge>
@@ -87,7 +87,7 @@ export default function HeroSection() {
           </div>
           <p className="text-gray-600 max-w-md">
             {t('hero.description')}
-            <a href="https://indevtechsolutions.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-black hover:text-orange-500 transition-colors">Indevtech Solutions</a>.
+            <a href="https://indevtechsolutions.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-black hover:text-blue-600 transition-colors">Indevtech Solutions</a>.
           </p>
         </motion.div>
 

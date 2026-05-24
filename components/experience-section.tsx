@@ -95,7 +95,7 @@ export default function ExperienceSection() {
                     href={exp.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-orange-500 font-semibold mt-2 hover:text-orange-600 transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-sm text-blue-600 font-semibold mt-2 hover:text-blue-700 transition-colors group"
                   >
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                     {t('exp.visit_website')}

@@ -3,6 +3,7 @@ import HeroSection from '@/components/hero-section';
 import ExperienceSection from '@/components/experience-section';
 import PortfolioSections from '@/components/portfolio-sections';
 import ProcessSection from '@/components/process-section';
+import ProjectsSection from '@/components/projects-section';
 import Footer from '@/components/footer';
 import WhatsAppButton from '@/components/whatsapp-button';
 
@@ -16,6 +17,9 @@ export default function Home() {
       </div>
       <div className="border-t border-gray-200">
         <PortfolioSections />
+      </div>
+      <div className="border-t border-gray-200">
+        <ProjectsSection />
       </div>
       <div className="border-t border-gray-200">
         <ProcessSection />

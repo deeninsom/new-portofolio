@@ -30,7 +30,7 @@ export default function PortfolioSections() {
   };
 
   return (
-    <section id="portfolio" className="py-12 px-4">
+    <section id="skills" className="py-12 px-4">
       <motion.div
         className="w-full max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
         variants={containerVariants}
@@ -59,7 +59,7 @@ export default function PortfolioSections() {
         <motion.div variants={cardVariants} className="flex flex-col">
           <h3 className="text-sm font-bold text-gray-600 mb-4">{t('portfolio.core_expertise')}</h3>
           <motion.div whileHover={{ scale: 1.05 }} className="h-full flex flex-col">
-            <Card className="overflow-hidden border-0 bg-orange-500 p-6 min-h-56 flex items-center justify-center shadow-sm transition-shadow duration-300 hover:shadow-xl">
+            <Card className="overflow-hidden border-0 bg-blue-600 p-6 min-h-56 flex items-center justify-center shadow-sm transition-shadow duration-300 hover:shadow-xl">
               <div className="text-center text-white">
                 <p className="text-sm font-semibold mb-2">{t('portfolio.api_microservices')}</p>
                 <p className="text-xs">{t('portfolio.restful_services')}</p>
@@ -84,7 +84,7 @@ export default function PortfolioSections() {
                   {t('portfolio.about_desc')}
                 </p>
               </div>
-              <a href="mailto:muhammad.syihabuddinn@gmail.com" className="text-orange-500 font-bold text-sm hover:text-orange-600 transition-all duration-300 hover:translate-x-1 group">
+              <a href="mailto:muhammad.syihabuddinn@gmail.com" className="text-blue-600 font-bold text-sm hover:text-blue-700 transition-all duration-300 hover:translate-x-1 group">
                 {t('portfolio.contact_me')} <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
             </Card>
