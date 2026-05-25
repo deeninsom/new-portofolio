@@ -146,8 +146,8 @@ export default function ProjectsSection() {
   return (
     <section id="portfolio" className="py-20 px-4 overflow-hidden relative">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      <div className="hidden md:block absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      <div className="hidden md:block absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
       <motion.div
         className="w-full max-w-3xl mx-auto"
@@ -179,7 +179,7 @@ export default function ProjectsSection() {
               {projects.map((project) => (
                 <CarouselItem key={project.id} className="pl-4 md:pl-6 md:basis-1/2 flex">
                   <div className="p-1 w-full flex">
-                    <Card className="group relative overflow-hidden w-full flex flex-col border border-gray-100 bg-white/50 backdrop-blur-xl hover:bg-white transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] rounded-3xl">
+                    <Card className="group relative overflow-hidden w-full flex flex-col border border-gray-100 bg-white/90 md:bg-white/50 md:backdrop-blur-xl hover:bg-white transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] rounded-3xl">
                       
                       {/* Image / Gradient Header */}
                       <div className={`relative h-56 w-full shrink-0 bg-gradient-to-br ${project.color} pt-6 px-6 overflow-hidden`}>
@@ -224,7 +224,7 @@ export default function ProjectsSection() {
                                 {t('projects.view_detail')}
                               </button>
                             </DialogTrigger>
-                            <DialogContent className="sm:max-w-md md:max-w-3xl bg-white/95 backdrop-blur-xl border-white/20 p-0 overflow-hidden">
+                            <DialogContent className="sm:max-w-md md:max-w-3xl bg-white/95 md:backdrop-blur-xl border-white/20 p-0 overflow-hidden">
                               
                               <div className={`w-full h-48 md:h-80 bg-gradient-to-br ${project.color} relative overflow-hidden shadow-inner`}>
                                  <Image src={project.image} alt={project.title} fill className="object-cover object-top" />
