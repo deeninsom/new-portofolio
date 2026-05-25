@@ -14,7 +14,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 bg-white/60 backdrop-blur-md border-b border-gray-100/50 z-50">
+    <nav className="sticky top-0 bg-white/95 md:bg-white/60 md:backdrop-blur-md border-b border-gray-100/50 z-50">
       <div className="w-full max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
@@ -116,7 +116,7 @@ export default function Navigation() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden border-t border-gray-100/50 bg-white/80 backdrop-blur-md overflow-hidden"
+            className="md:hidden border-t border-gray-100/50 bg-white/95 overflow-hidden"
           >
             <motion.div
               initial={{ y: -10 }}

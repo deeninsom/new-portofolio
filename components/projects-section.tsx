@@ -183,7 +183,7 @@ export default function ProjectsSection() {
                       
                       {/* Image / Gradient Header */}
                       <div className={`relative h-56 w-full shrink-0 bg-gradient-to-br ${project.color} pt-6 px-6 overflow-hidden`}>
-                        <div className="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+                        <div className="hidden md:block absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700"></div>
                         
                         {/* Project Image */}
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-[90%] rounded-t-xl shadow-2xl overflow-hidden transform group-hover:translate-y-2 group-hover:scale-105 transition-all duration-500 border-x border-t border-white/20">

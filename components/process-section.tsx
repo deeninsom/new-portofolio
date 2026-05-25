@@ -63,7 +63,7 @@ export default function ProcessSection() {
           <p className="text-gray-600">{t('process.subtitle')}</p>
         </motion.div>
 
-        <Card className="border-0 bg-white/60 backdrop-blur-md shadow-xl p-8 md:p-12">
+        <Card className="border-0 bg-white/90 md:bg-white/60 md:backdrop-blur-md shadow-xl p-8 md:p-12">
           {/* Active Step Content */}
           <div className="mb-10 min-h-[350px]">
             <AnimatePresence mode="wait">
